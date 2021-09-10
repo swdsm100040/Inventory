@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" id="main">
+    <div class="col-md-12 mb-3">
+        <h3>Customer List</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Customer List</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="col-md-12 my-4">
+        <div class="card">
+            <div class="card-header">
+                <a href="{% url 'addcustomer' %}" class="add-btn"><button type="button" class="btn btn-primary"><i
+                            class="icofont-ui-add"></i> Add
+                        Customer</button></a>
+            </div>
+            <div class="card-body">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="display datatable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Phone Number</th>
+                                    <th>Bill Type</th>
+                                    <th>Opening Balance</th>
+                                    <th>Total Invoice</th>
+                                    <th>Total Rtv</th>
+                                    <th>Total Bill</th>
+                                    <th>Total Due</th>
+                                    <th>Status</th>
+                                    <th>Active</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Altaf</td>
+                                    <td>8522655544</td>
+                                    <td>Bill to Bill</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>Active</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info" data-toggle="tooltip"
+                                                    data-placement="top" title="Edit"><i
+                                                        class="icofont-edit"></i></button></a>
+                                            <a href="#"><button type="button" class="btn btn-danger"
+                                                    data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                                        class="icofont-ui-delete"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>annu</td>
+                                    <td>8522655544</td>
+                                    <td>Bill to Bill</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>Active</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info" data-toggle="tooltip"
+                                                    data-placement="top" title="Edit"><i
+                                                        class="icofont-edit"></i></button></a>
+                                            <a href="#"><button type="button" class="btn btn-danger"
+                                                    data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                                        class="icofont-ui-delete"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>sagar</td>
+                                    <td>8522655544</td>
+                                   <td>Bill to Bill</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>Active</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info" data-toggle="tooltip"
+                                                    data-placement="top" title="Edit"><i
+                                                        class="icofont-edit"></i></button></a>
+                                            <a href="#"><button type="button" class="btn btn-danger"
+                                                    data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                                        class="icofont-ui-delete"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>makdoom</td>
+                                    <td>8522655544</td>
+                                    <td>Bill to Bill</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>Active</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info" data-toggle="tooltip"
+                                                    data-placement="top" title="Edit"><i
+                                                        class="icofont-edit"></i></button></a>
+                                            <a href="#"><button type="button" class="btn btn-danger"
+                                                    data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                                        class="icofont-ui-delete"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>yogesh</td>
+                                    <td>8522655544</td>
+                                    <td>Bill to Bill</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>Active</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info" data-toggle="tooltip"
+                                                    data-placement="top" title="Edit"><i
+                                                        class="icofont-edit"></i></button></a>
+                                            <a href="#"><button type="button" class="btn btn-danger"
+                                                    data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                                        class="icofont-ui-delete"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>anil</td>
+                                    <td>8522655544</td>
+                                    <td>Bill to Bill</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>Active</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info" data-toggle="tooltip"
+                                                    data-placement="top" title="Edit"><i
+                                                        class="icofont-edit"></i></button></a>
+                                            <a href="#"><button type="button" class="btn btn-danger"
+                                                    data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                                        class="icofont-ui-delete"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Rilesh</td>
+                                    <td>8522655544</td>
+                                    <td>Bill to Bill</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>2513</td>
+                                    <td>0</td>
+                                    <td>Active</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info" data-toggle="tooltip"
+                                                    data-placement="top" title="Edit"><i
+                                                        class="icofont-edit"></i></button></a>
+                                            <a href="#"><button type="button" class="btn btn-danger"
+                                                    data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                                        class="icofont-ui-delete"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

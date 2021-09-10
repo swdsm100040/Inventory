@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" id="main">
+    <div class="col-md-12 main-top-head mb-3">
+        <h3 class="page-title">Dashboard</h3>
+    </div>
+    <div class="col-md-12 my-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="counter">
+                            <div class="counter-icon">
+                                <i class="fa fa-globe"></i>
+                            </div>
+                            <h3>Web Designing</h3>
+                            <span class="counter-value">1963</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="counter info">
+                            <div class="counter-icon">
+                                <i class="fa fa-rocket"></i>
+                            </div>
+                            <h3>Web Designing</h3>
+                            <span class="counter-value">1854</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="counter pink">
+                            <div class="counter-icon">
+                                <i class="fa fa-rocket"></i>
+                            </div>
+                            <h3>Web Designing</h3>
+                            <span class="counter-value">1854</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="counter primary">
+                            <div class="counter-icon">
+                                <i class="fa fa-rocket"></i>
+                            </div>
+                            <h3>Web Designing</h3>
+                            <span class="counter-value">1854</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="chart">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

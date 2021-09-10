@@ -1,0 +1,240 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Portfolio">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap">
+    <meta name="author" content="Rilesh Sharma">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schoolmng</title>
+    <link href="{% static 'img/fevicon.jpg'%}" rel="icon">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'icofont/icofont.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.dataTables.min.css' %}">
+</head>
+
+<body onclick="closeNav()">
+    <div id="wrapper">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-3">
+            <div class="flex-row d-flex">
+                <button type="button" class="navbar-toggler toggler-new" data-toggle="offcanvas"
+                    title="Toggle responsive left sidebar" onclick="openNav(event)">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#" title="Free Bootstrap Admin Template">Inventery</a>
+            </div>
+            <div class="navbar-collapse collapse" id="collapsingNavbar">
+                <ul class="navbar-nav user-nav">
+                    <li class="nav-item dropdown notification-dropdown">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <i class="icofont-notification"></i> <span class="badge badge-pill">3</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right notifications">
+                            <div class="topnav-dropdown-header">
+                                <span class="notification-title">Notifications</span>
+                                <a href="#" class="clear-noti"> Clear All </a>
+                            </div>
+                            <div class="noti-content">
+                                <ul class="notification-list ">
+                                    <li class="notification-message">
+                                        <a href="#">
+                                            <div class="media media-main-div">
+                                                <span class="avatar">
+                                                    <img src="{% static 'img/avatar.png' %}" alt="" class="avatar-img">
+                                                </span>
+                                                <div class="media-body">
+                                                    <p class="noti-details"><span class="noti-title">rilesh</span> Lorem
+                                                        ipsum dolor, sit<span class="noti-title"> amet consectetur
+                                                            adipisicing elit.
+                                                            Facilis, necessitatibus?</span></p>
+                                                    <p class="noti-time"><span class="notification-time">4 mins
+                                                            ago</span></p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="notification-message">
+                                        <a href="#">
+                                            <div class="media media-main-div">
+                                                <span class="avatar">
+                                                    <img src="{% static 'img/avatar.png' %}" alt="" class="avatar-img">
+                                                </span>
+                                                <div class="media-body">
+                                                    <p class="noti-details"><span class="noti-title">rilesh</span> Lorem
+                                                        ipsum dolor, sit<span class="noti-title"> amet consectetur
+                                                            adipisicing elit.
+                                                            Facilis, necessitatibus?</span></p>
+                                                    <p class="noti-time"><span class="notification-time">10 mins
+                                                            ago</span></p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="topnav-dropdown-footer">
+                                <a href="#">View all Notifications</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown has-arrow main-drop">
+                        <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <span class="user-img"><img src="{% static 'img/avatar.png' %}" alt="" class="avatar-img">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="javascript:void(0);">My Profile</a>
+                            <a class="dropdown-item" href="javascript:void(0);">My Settings</a>
+                            <a class="dropdown-item" href="javascript:void(0);">My bank</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-md-3 bg-light pl-0 sidenav" id="newsidebar" onclick="event.stopPropagation();">
+                <div class="log text-center">
+                    <h3>Inventory</h3>
+                </div>
+                <nav class="navigation">
+                    <ul class="mainmenu">
+                        <li><a href="{% url 'dashboard' %}"><span><i class="icofont-dashboard"></i></span> Dashboard</a></li>
+                        <li><a href="{% url 'employeelist' %}"><span><i class="icofont-users-social"></i></span> Employee</a></li>
+                        <li><a href="{% url 'customerlist' %}"><span><i class="icofont-tags"></i></span> Customer</a></li>
+                        <li><a href="{% url 'supplierlist' %}"><span><i class="icofont-handshake-deal"></i></span> Supplier</a></li>
+                        <li><a href="{% url 'productlist' %}"><span><i class="icofont-box"></i></span> Product</a></li>
+                        <li><a href="{% url 'productlist' %}"><span><i class="icofont-adjust"></i></span>Inventory Adjustment</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-link"><i class="icofont-ui-cart"></i> Sales <span
+                                    class="menu-arrow"></span></a>
+                            <ul class="submenu">
+                                <li><a href=""><span><i class="icofont-archive"></i></span> POS</a></li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> List Return Invoice
+                                    </a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> Unpaid Invoices </a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> Paid Invoices </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href=""><span><i class="icofont-dollar"></i></span> Receipt</a></li>
+                        <li><a href=""><span><i class="icofont-credit-card"></i></span> Payment</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-link"><span><i class="icofont-file-alt"></i></span>Report <span
+                                    class="menu-arrow"></span></a>
+                            <ul class="submenu">
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> Product Report</a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> Sales Report </a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> Purchase Report </a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> Expense Report </a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> Supplier Report </a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> Customer Report </a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> Profit and/or Loss
+                                        Report </a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> SpecificMonthlyReport
+                                    </a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> Purchase Return Report
+                                    </a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-listine-dots"></i></span> Sales Return Report
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-link">Master <span class="menu-arrow"></span></a>
+                            <ul class="submenu">
+                                <li><a href=""><span><i class="icofont-lawyer"></i></span> Vat</a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-ui-file"></i></span>Recipt Type</a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-tags"></i></span>Category</a>
+                                </li>
+                                <li><a href=""><span><i class="icofont-tags"></i></span>Sub Category</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            {% block content %}
+
+
+            {% endblock content %}
+
+            <footer class="bg-light col-12 py-2 dashboard-footer">
+                <p class="text-right small mb-0">©2021 Company</p>
+            </footer>
+
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.min.js'  %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/chart.min.js'  %}"></script> 
+    <script src="{% static 'js/popper.min.js'  %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js'  %}"></script>
+    <script src="{% static 'js/jquery.dataTables.min.js'  %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        function openNav(event) {
+            event.stopPropagation();
+            document.getElementById("newsidebar").style.width = "251px";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("newsidebar").style.display = "block";
+            document.getElementsByTagName('body')[0].style.background = "#f5f4f4";
+        }
+
+        function closeNav() {
+            document.getElementById("newsidebar").style.width = "0";
+            document.getElementById("newsidebar").style.padding = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementsByTagName('body')[0].style.background = "#f5f4f4";
+        }
+    </script>
+    <script>
+        $(function () {
+            $("li").click(function () {
+                $("li").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('.dropdown').each(function () {
+                var $dropdown = $(this);
+
+                $(".dropdown-link", $dropdown).click(function (e) {
+                    e.preventDefault();
+                    $div = $(".submenu", $dropdown);
+                    $div.toggle();
+                    $(".submenu").not($div).hide();
+                    return false;
+                });
+
+            });
+
+            $('html').click(function () {
+                $(".submenu").hide();
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="container" id="main">
+    <div class="col-md-12 mb-3">
+        <h3>Add Product (csv)</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'productlist' %}">Product List</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Add Product(csv)</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="col-md-12 my-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-12 text-center">
+                    <p>Please download the csv format file from <span class="text-danger"><a
+                                href="{% static 'import/product.csv' %}" download>here!</a></span></p>
+                </div>
+                <form>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group d-grid">
+                                <label>Import Product</label>
+                                <input type="file" class="form-control-file" id="product_picture"
+                                    name="product_picture">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

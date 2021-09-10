@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="{% static 'img/fevicon.jpg'%}" rel="icon">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/common.css' %}">
+<link rel="stylesheet" href="{% static 'icofont/icofont.min.css' %}">
+
+<body class="login-body">
+    <div class="container login-container">
+        <div class="col-md-8 m-auto">
+            <div class="row main-content text-center">
+                <div class="col-md-4 text-center company__info">
+                    <span class="company__logo">
+                        <h2><span class="fa fa-android"></span></h2>
+                    </span>
+                    <h4 class="company_title">Your Company Logo</h4>
+                </div>
+                <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <h2>Log In</h2>
+                        </div>
+                        <div class="row">
+                            <form class="form-group">
+                                <div class="row has-input">
+                                    <input type="text" name="username" id="username" class="login_form_input"
+                                        placeholder="Username">
+                                    <span class="icofont-user-alt-3 form-control-input curser-non"></span>
+                                </div>
+                                <div class="row has-input">
+                                    <input type="password" name="password" id="password" class="login_form_input"
+                                        placeholder="Password">
+                                    <span toggle="#password-field"
+                                        class="icofont-eye-blocked form-control-input cursor-pointer field_icon toggle-password"></span>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" value="Submit" class="btn login-btn">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <p><span class="h5"><i class="icofont-lock"></i></span> <a
+                                    href="{% url 'forgetpassword' %}"> Forgot
+                                    Password?</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.3.1.slim.min.js'  %}"></script>
+    <script src="{% static 'js/popper.min.js'  %}"></script>
+    <script>
+        $(document).on('click', '.toggle-password', function () {
+            $(this).toggleClass("icofont-eye-alt icofont-eye-blocked");
+            var input = $("#password");
+            input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password')
+        });
+    </script>
+</body>
+
+</html>

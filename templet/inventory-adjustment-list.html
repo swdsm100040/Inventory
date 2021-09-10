@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" id="main">
+    <div class="col-md-12 mb-3">
+        <h3>Inventory Adjustment List</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Inventory Adjustment List</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="col-md-12 my-4">
+        <div class="card">
+            <div class="card-header">
+                <a href="{% url 'addinventoryadjustment' %}" class="add-btn"><button type="button" class="btn btn-primary"><i
+                            class="icofont-ui-add"></i> Add
+                        Inventory Adjustment</button></a>
+            </div>
+            <div class="card-body"> 
+                    <div class="col-md-12">
+                         <form class="d-flex justify-content-center">
+                            <div class="form-group">
+                                <label>Start Date</label>
+                                <input type="date" class="form-control" id="start_date" name="start_date">
+                            </div>
+                            <span class="date-to">To</span>
+                            <div class="form-group">
+                                <label>End Date</label>
+                                <input type="date" class="form-control" id="end_date" name="end_date">
+                            </div>
+                         </form>
+                    </div>
+
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="display datatable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Tilte</th>
+                                    <th>Adjustment Invoice Id</th>
+                                    <th>Expense</th>
+                                    <th>Deposit</th>
+                                    <th>Active</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2021-08-16	</td>
+                                    <td>Wish</td>
+                                    <td>1629107371</td>
+                                    <td>0</td>
+                                    <td>0.16</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info text-white" data-toggle="tooltip"
+                                                    data-placement="top" title="detail"><i class="icofont-info-circle"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2021-08-16	</td>
+                                    <td>second adjustment</td>
+                                    <td>1629107371</td>
+                                    <td>0</td>
+                                    <td>0.16</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info text-white" data-toggle="tooltip"
+                                                    data-placement="top" title="detail"><i class="icofont-info-circle"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2021-08-16</td>
+                                    <td>Wish</td>
+                                    <td>1629107371</td>
+                                    <td>0</td>
+                                    <td>0.16</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info text-white" data-toggle="tooltip"
+                                                    data-placement="top" title="detail"><i class="icofont-info-circle"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2021-08-16	</td>
+                                    <td>Good</td>
+                                    <td>1629107371</td>
+                                    <td>0</td>
+                                    <td>0.16</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info text-white" data-toggle="tooltip"
+                                                    data-placement="top" title="detail"><i class="icofont-info-circle"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2021-08-16	</td>
+                                    <td>Wish</td>
+                                    <td>1629107371</td>
+                                    <td>0</td>
+                                    <td>0.16</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info text-white" data-toggle="tooltip"
+                                                    data-placement="top" title="detail"><i class="icofont-info-circle"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <td>2021-08-16	</td>
+                                    <td>test</td>
+                                    <td>1629107371</td>
+                                    <td>0</td>
+                                    <td>0.16</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info text-white" data-toggle="tooltip"
+                                                    data-placement="top" title="detail"><i class="icofont-info-circle"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                   <td>2021-08-16	</td>
+                                    <td>Good</td>
+                                    <td>1629107371</td>
+                                    <td>0</td>
+                                    <td>0.16</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#"><button type="button" class="btn btn-info text-white" data-toggle="tooltip"
+                                                    data-placement="top" title="detail"><i class="icofont-info-circle"></i></button></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td colspan="3"><strong>Total Adjustment Price:</strong></td>
+                                <td>11950</td>
+                                <td>41009850.16</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="text-right"><strong>Grand Total Adjustment Price:<strong></td>
+                                <td><strong>40997900.16</strong</td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

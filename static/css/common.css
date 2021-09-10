@@ -1,0 +1,164 @@
+html {
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    font-size: .8rem;
+    font-weight: 400;
+    color: #000;
+    background-color:#f5f4f4;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Poppins';
+    margin-top: 0;
+    font-weight: 500;
+  }
+  
+  h1,
+  .h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2,
+  .h2 {
+    font-size: 1.875rem;
+  }
+  
+  h3,
+  .h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4,
+  .h4 {
+    font-size: 1.125rem;
+  }
+  
+  h5,
+  .h5 {
+    font-size: 0.875rem;
+  }
+  
+  h6,
+  .h6 {
+    font-size: 0.75rem;
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  hr {
+    border-top: 1px solid #d6d6d6;
+  }
+  
+  dl,
+  ol,
+  ul {
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  input,
+  button,
+  a {
+    transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+  }
+  
+  input,
+  input:focus,
+  button,
+  button:focus {
+    outline: none;
+  }
+  
+  input[type="file"] {
+    height: auto;
+  }
+  
+  input[type=text],
+  input[type=password] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  textarea.form-control {
+    resize: vertical;
+  }
+  
+  label.col-form-label {
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  section {
+    padding: 50px 0;
+  }
+  body::-webkit-scrollbar-track,
+  .scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    background-color: #F5F5F5;
+  }
+  
+  body::-webkit-scrollbar,
+  .scrollbar::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+  }
+  
+  body::-webkit-scrollbar-thumb,
+  .scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #acacac;
+  }
+  img {
+      height: auto;
+      max-width: 100%;
+  }
+  p {
+    color: #010101;
+  }
+  a{
+    text-decoration: none;
+  }
+  .container {max-width: 1380px;}
+.form-group{padding-bottom: 25px;}
+.form-group label{
+  font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+.form-group input{
+  background-color: whitesmoke;
+}
+.form-group select{
+  background-color: whitesmoke;
+}
+.form-group textarea{
+  background-color: whitesmoke;
+}
+.form-group input[type="file"]{
+  border: 1px solid #ced4da;
+    padding: 11px 6px;
+    border-radius: 5px;
+}

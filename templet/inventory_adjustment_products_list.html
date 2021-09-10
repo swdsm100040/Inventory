@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" id="main">
+    <div class="col-md-12 mb-3">
+        <h3>Inventory Adjustment Products List</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'inventoryadjustmentlist' %}">Inventory Adjustment List</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Inventory Adjustment Products List</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="col-md-12 my-4">
+        <div class="card">
+            <div class="card-header">
+                <a href="{% url 'adjustment_product_list' %}" class="add-btn"><button type="button"
+                        class="btn btn-primary"> Edit</button></a>
+            </div>
+            <div class="card-body">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="display datatable" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Sl</th>
+                                    <th> Codes</th>
+                                    <th> Name</th>
+                                    <th> Previous Quantity </th>
+                                    <th> Available </th>
+                                    <th> Purchase Price </th>
+                                    <th> Expense </th>
+                                    <th> Deposit </th>
+                                </tr>
+                            </thead>
+                            <tbody class=" ">
+                                <tr role="row">
+                                    <td>33</td>
+                                    <td>
+                                        <label style="font-weight: normal; font-size: 12px; padding: 5px;"
+                                            class="bg-primary">001</label>
+                                    </td>
+
+                                    <td>Shomocha</td>
+                                    <td>
+                                        0
+                                    </td>
+                                    <td>
+                                        100
+                                    </td>
+                                    <td>
+                                        10
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        1,000.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">Total Adjustment Price:</td>
+                                    <td>0.00</td>
+                                    <td>1,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" class="text-right">Grand Total Adjustment Price:</td>
+                                    <td colspan="1"><strong>1,000.00</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

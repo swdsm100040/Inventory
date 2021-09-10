@@ -21,5 +21,7 @@ urlpatterns = [
          name='addinventoryadjustment'),
     path("adjustment_product_list", views.adjustment_product_list,
          name='adjustment_product_list'),
-     path("product_detail", views.product_detail,name='product_detail'),
+    path("product_detail", views.product_detail, name='product_detail'),
+    path("inventory_adjustment_products_list", views.inventory_adjustment_products_list,
+         name='inventory_adjustment_products_list'),
 ]

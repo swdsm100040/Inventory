@@ -487,3 +487,26 @@
 
 .date-to{padding: 34px 15px 10px 15px;
   font-size: 18px;}
+.dashboard-input{
+  height: 40px;
+    background-color: #ced4da;
+    width: 189px;
+    color: rgb(10, 10, 10);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.accordeion-header{background-color: #fff;
+  border: 1px solid white;
+}
+.addrow{cursor: pointer;}
+.addproduct tr th{
+  border: 1px solid #929292;
+  padding: 8px;
+}
+.product_list tr td{
+  border: 1px solid #929292;
+  padding: 8px;
+}
+.addproduct-list-card{height: 388px;
+  overflow-x: hidden;}
+.all-p-10{padding: 10px;}

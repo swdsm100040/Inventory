@@ -162,3 +162,9 @@ html {
     padding: 11px 6px;
     border-radius: 5px;
 }
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}

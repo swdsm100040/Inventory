@@ -69,3 +69,7 @@ def product_detail(request):
 
 def inventory_adjustment_products_list(request):
     return render(request, 'inventory_adjustment_products_list.html')
+
+
+def pos(request):
+    return render(request, 'pos.html')

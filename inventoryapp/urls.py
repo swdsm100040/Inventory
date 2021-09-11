@@ -24,4 +24,7 @@ urlpatterns = [
     path("product_detail", views.product_detail, name='product_detail'),
     path("inventory_adjustment_products_list", views.inventory_adjustment_products_list,
          name='inventory_adjustment_products_list'),
+    path("pos", views.pos, name='pos'),
+
+
 ]

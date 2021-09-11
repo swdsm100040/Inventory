@@ -1,0 +1,458 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" id="main">
+    <div class="col-md-12 main-top-head mb-3">
+        <h3 class="page-title">Pos</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+            <div id="accordion" class="mb-2">
+                <div class="card">
+                    <button class="card-header collapsed card-link accordeion-header" data-toggle="collapse"
+                        data-target="#productList">
+
+                        <b class="header-title float-left">
+                            List of product
+                        </b>
+                        <i class="icofont-plus-square float-right "></i>
+                    </button>
+
+                    <div id="productList" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="display datatable" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Product Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="addrow">
+                                                <td>1</td>
+                                                <td>bag</td>
+                                            </tr>
+                                            <tr class="addrow">
+                                                <td>2</td>
+                                                <td>bag</td>
+                                            </tr>
+                                            <tr class="addrow">
+                                                <td>3</td>
+                                                <td>bag</td>
+                                            </tr>
+                                            <tr class="addrow">
+                                                <td>4</td>
+                                                <td>bag</td>
+                                            </tr>
+                                            <tr class="addrow">
+                                                <td>5</td>
+                                                <td>bag</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text p-3"><i class="icofont-bar-code"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Product with code or Name">
+                            <div class="input-group-append">
+                                <span class="input-group-text p-3"><i class="icofont-ui-search"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card addproduct-list-card">
+                    <div class="card-body">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="display addproduct" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl No</th>
+                                            <th>Articles Description</th>
+                                            <th>Quantity</th>
+                                            <th>Selling Price</th>
+                                            <th>Amount</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="product_list">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="sale_table" class="table table-bordered table-striped">
+                                <tbody>
+                                    <tr class="">
+                                        <td colspan="1" class="text-center ">Total</td>
+                                        <td colspan="2" class="text-center"><input class="form-control" name="sub_total"
+                                                id="total_amount" value="0" type="number" min="0" step="0.01">&nbsp;
+                                            <span id="amountInWord" class="text-capitalize">Taka in word</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7">
+                                            <!-- <input type="hidden" name="cheque_no" id="cheque_no" value=""
+                                                placeholder="cheque_no">
+                                            <input type="hidden" name="cheque_date" id="cheque_date" value=""
+                                                placeholder="cheque_date">
+                                            <input type="hidden" name="clearance_date" id="clearance_date" value=""
+                                                placeholder="clearance_date">
+                                            <input type="hidden" name="discount_amount" id="discount_amount" value="0"
+                                                placeholder="discount_amount">
+                                            <input type="hidden" name="receipt_id" id="receipt_id" value=""
+                                                placeholder="receipt_id">
+                                            <input type="hidden" name="receipt_details" id="receipt_details" value=""
+                                                placeholder="receipt_details">
+                                            <input type="hidden" name="total" id="total" value="">
+                                            <input type="hidden" name="checkedit" id="checkedit" value="0"> -->
+                                            <div class="btn-group float-right">
+                                                <button type="button" name="invoice_draft" value="invoice_draft"
+                                                    id="invoice_draft" class="btn btn-warning"> <i
+                                                        class="icofont-ui-edit m-r-5"></i> <span>Draft</span></button>
+                                                <button onclick="return form_validation(this)" name="invoice_payment"
+                                                    value="invoice_payment" id="invoice_payment"
+                                                    class="btn btn-secondary"> <i class="icofont-basket m-r-5"></i>
+                                                    <span>Invoice &amp;
+                                                        Payment</span></button>
+                                                <button onclick="return form_validation(this)" name="invoice"
+                                                    value="invoice" class="btn btn-primary"> <i
+                                                        class="icofont-basket m-r-5"></i> <span>Only
+                                                        Invoice</span></button>
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+
+
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="col-md-12">
+                <div id="accordion" class="mb-2">
+                    <div class="card">
+                        <button class="card-header collapsed card-link accordeion-header bg-primary"
+                            data-toggle="collapse" data-target="#recenttransition">
+
+                            <b class="header-title float-left text-white">
+                                Your Recent Transactions
+                            </b>
+                            <i class="icofont-plus-square float-right text-white"></i>
+                        </button>
+
+                        <div id="recenttransition" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <nav class="nav nav-tabs nav-justified">
+                                    <a class="nav-item nav-link active" data-toggle="tab" href="#paid">Paid</a>
+                                    <a class="nav-item nav-link" data-toggle="tab" href="#due">Due</a>
+                                    <a class="nav-item nav-link" data-toggle="tab" href="#draft">Draft</a>
+                                </nav>
+
+                                <div class="tab-content">
+                                    <div id="paid" class="tab-pane active">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive">
+                                                <table class="display datatable" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>sr</th>
+                                                            <th>Bill No</th>
+                                                            <th>Amount</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr role="row" class="odd">
+                                                            <td>1.</td>
+                                                            <td>42(rilesh)</td>
+                                                            <td>83400</td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <a href="#" target="_blank"
+                                                                        class="btn btn-sm btn-info"><i
+                                                                            class="icofont-info-circle"></i> </a>
+                                                                    <a href="#" class="btn btn-sm btn-primary"><i
+                                                                            class="icofont-ui-edit"></i></a>
+                                                                    <a href="#" class="btn btn-sm btn-danger"><i
+                                                                            class="icofont-ui-delete"></i></a>
+
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="due" class="tab-pane fade">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive">
+                                                <table class="display datatable" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>sr</th>
+                                                            <th>Bill No</th>
+                                                            <th>Amount</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr role="row" class="odd">
+                                                            <td>1.</td>
+                                                            <td>42(rilesh)</td>
+                                                            <td>83400</td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <a href="#" target="_blank"
+                                                                        class="btn btn-sm btn-info"><i
+                                                                            class="icofont-info-circle"></i> </a>
+                                                                    <a href="#" class="btn btn-sm btn-primary"><i
+                                                                            class="icofont-ui-edit"></i></a>
+                                                                    <a href="#" class="btn btn-sm btn-danger"><i
+                                                                            class="icofont-ui-delete"></i></a>
+
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="draft" class="tab-pane fade">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive">
+                                                <table class="display datatable" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>sr</th>
+                                                            <th>Bill No</th>
+                                                            <th>Amount</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr role="row" class="odd">
+                                                            <td>1.</td>
+                                                            <td>42(rilesh)</td>
+                                                            <td>83400</td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <a href="#" target="_blank"
+                                                                        class="btn btn-sm btn-info"><i
+                                                                            class="icofont-info-circle"></i> </a>
+                                                                    <a href="#" class="btn btn-sm btn-primary"><i
+                                                                            class="icofont-ui-edit"></i></a>
+                                                                    <a href="#" class="btn btn-sm btn-danger"><i
+                                                                            class="icofont-ui-delete"></i></a>
+
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="input-group pb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Customer<span class="text-danger">*</span></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Customer Name or Mobile"
+                                    name="custommer">
+                                <div class="input-group-append">
+                                    <span class="input-group-text all-p-10" data-toggle="modal"
+                                        data-target="#addcustomer"><i class="icofont-ui-add"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-md-6 pb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Cus,Name<span
+                                                    class="text-danger">*</span></span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Customer Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Cus,Address<span
+                                                    class="text-danger">*</span></span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Customer Address">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Date<span class="text-danger">*</span></span>
+                                        </div>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">vat<span class="text-danger">*</span></span>
+                                        </div>
+                                        <select class="form-control" id="vat" name="vat">
+                                            <option>kg</option>
+                                            <option>lit</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="superiorcourt">
+                            <table class="table table-striped recieptdiv mb-3">
+                                <tbody>
+                                    <tr>
+                                        <td>Due/Balance Amount (৳)</td>
+                                        <td>:</td>
+                                        <td id="totalamount" class="text-right">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Current Invoice Amount (৳)<br><small> (incl. vat) </small></td>
+                                        <td>:</td>
+                                        <td id="currentTotalAmount" class="text-right">0</td>
+                                    </tr>
+                                    <tr style="border-top: 3px solid black">
+                                        <td>Payment (৳)</td>
+                                        <td>:</td>
+                                        <td id="currentPaymentAmount" class="text-right">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Discount (৳)</td>
+                                        <td>:</td>
+                                        <td id="currentDiscountAmount" class="text-right">0</td>
+                                    </tr>
+                                    <tr style="border-top: 3px solid black">
+                                        <th>Grand Total (৳)</th>
+                                        <th>:</th>
+                                        <td id="grandtotalamount" class="text-right">0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="addcustomer" tabindex="-1" role="dialog" aria-labelledby="addcustomer"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addcustomer">Customer Entry</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <form id="formCustomer" method="POST" enctype="multipart/form-data">
+                        <div class="col-md-12">
+                            <div class="form-group text-center">
+                                <button type="submit" id="cus_store_btn" class="btn btn-sm btn-primary">Submit</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group  clear">
+                                    <label class="control-label clear">Name<span style="color:red;">*</span></label>
+                                    <input class="form-control" id="name" required="required" name="name" type="text"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group  clear">
+                                    <label class="control-label clear">Mobile<span style="color:red;">*</span></label>
+                                    <input class="form-control" id="mobile" required="required" name="mobile"
+                                        type="text" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group  clear">
+                            <label class="control-label clear">Email</label>
+                            <input class="form-control" id="email" name="email" type="email" value="">
+                        </div>
+                        <div class="form-group  clear">
+                            <label class="control-label clear">Address<span style="color:red;">*</span></label>
+                            <textarea class="form-control" id="address" rows="3" required="required" name="address"
+                                cols="50" spellcheck="false"></textarea>
+                        </div>
+                        <div class="form-group   ">
+                            <label class="control-label clear"> Gender</label>
+                            <select id="gender" class="form-control" name="gender">
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                                <option value="3">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group  clear">
+                            <label class="control-label clear">NID</label>
+                            <input class="form-control" id="nid" name="nid" type="text" value="">
+                        </div>
+                        <div class="form-group  clear">
+                            <label class="control-label clear">Opening Balance</label>
+                            <input class="form-control" min="0" name="opening_balance" type="number" value="0">
+                        </div>
+                        <div class="form-group   ">
+                            <label class="control-label clear"> Recipt Type</label>
+                            <select id="receipt_type" class="form-control" name="receipt_type">
+                                <option value="2">Bill to Bill</option>
+                                <option value="1">Ledger</option>
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
